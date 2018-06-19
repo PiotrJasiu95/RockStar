@@ -1,0 +1,24 @@
+﻿@model IEnumerable<RockStar.Models.Album>
+
+@{
+    ViewBag.Title = "Albums";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Albums</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Album</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var album in Model)
+        {
+            <tr>
+                <td>@album.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
